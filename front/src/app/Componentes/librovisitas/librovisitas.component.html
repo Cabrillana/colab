@@ -3,24 +3,24 @@
         <h2>Libro de visitas</h2>
     </div>
     <div class="card-body">
-        <form [formGroup]="formLibroVisitas" class="shadow p-3 mb-5 bg-body border rounded p-4">
+        <form [formGroup]="formLibroVisitas" (submit)="insertarVisitas()" class="shadow p-3 mb-5 bg-body border rounded p-4">
             <label for="nombre">Nombre</label>
-            <input placeholder="nombre" class="form-control" type="text" name="nombre">
+            <input placeholder="nombre" class="form-control" type="text" formControlName="nombre">
             <br>
             <label for="email">E-Mail</label>
-            <input placeholder="email" class="form-control" type="email" name="email">
+            <input placeholder="email" class="form-control" type="email" formControlName="email">
             <br>
             <label for="poblacion">Población</label>
-            <select class="form-control" aria-label="Default select example">
+            <select class="form-control" aria-label="Default select example" formControlName="visitado">
                 <option>Selecciona una opción</option>
                 <option value="{{municipio.nombre}}" *ngFor="let municipio of municipios">{{municipio.nombre}}</option>
             </select>
             <br>
             <label for="procedencia">Procedencia</label>
-            <input placeholder="procedencia" class="form-control" type="text">
+            <input placeholder="procedencia" class="form-control" formControlName="procedencia" type="text">
             <br>
             <label for="comentarios">Comentario</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <textarea class="form-control" formControlName="comentario" id="exampleFormControlTextarea1" rows="3"></textarea>
             <br>
             <button class="btn btn-primary btn-block" type="submit">Enviar</button>
         </form>

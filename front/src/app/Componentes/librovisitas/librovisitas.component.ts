@@ -13,7 +13,6 @@ import { VisitasService } from 'src/app/Servicios/visitas.service';
 export class LibrovisitasComponent implements OnInit {
 	formLibroVisitas = this.fb.group({
 		nombre: [ '', [ Validators.required ] ],
-		apellidos: [ '', [ Validators.required ] ],
 		email: [ '', [ Validators.required, Validators.email ] ],
 		visitado: [ '', [ Validators.required ] ],
 		procedencia: [ '', [ Validators.required ] ],
