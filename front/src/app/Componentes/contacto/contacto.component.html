@@ -1,0 +1,23 @@
+<div class="">
+    <div class="my-3" style="text-align: center;">
+        <h2>Contactanos</h2>
+    </div>
+    <div class="card-body">
+        <form [formGroup]="formContactos" class="shadow p-3 mb-5 bg-body border rounded p-4">
+            <div class="form-group">
+                <label>Correo Electronico</label>
+                <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Correo" formControlName="correo">
+            </div>
+            <div class="form-group">
+                <label>Nombre Completo</label>
+                <input class="form-control" type="text" placeholder="Nombre Completo" formControlName="nombre">
+            </div>
+            <div class="form-group">
+                <label>Sugerencias</label>
+                <input class="form-control" type="text" placeholder="Sugerencia" formControlName="sugerencias">
+            </div>
+            <button type="submit" (click)="enviarSugerencia()" class="btn btn-primary">Submit</button>
+        </form>
+
+    </div>
+</div>
