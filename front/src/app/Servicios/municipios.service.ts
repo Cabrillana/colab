@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/internal/Observable';
 
-const url = 'http://localhost/colab/back/municipios';
+const url = 'http://localhost/colab/back/municipios/';
 
 @Injectable({
 	providedIn: 'root'
