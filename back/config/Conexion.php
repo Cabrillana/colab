@@ -1,7 +1,5 @@
 <?php
 
-namespace App\Config;
-
 class Conexion
 {
   private $host = "localhost";
@@ -9,8 +7,8 @@ class Conexion
   private $user = "root";
   private $password = "";
   public $pdo;
-  
-  public function __construct() {
+  //Pablo probando
+  public function getConnection() {
     $this->pdo = null;
     try{
       $this->pdo = new \PDO('mysql:host='.$this->host.';dbname='.$this->database,$this->user,$this->password);
