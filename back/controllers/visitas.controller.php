@@ -23,14 +23,13 @@ class VisitasController {
     $visita = json_decode(file_get_contents("php://input"));
     /*Comprobamos que no este vacio dos de los campos obligatorios.*/
 
-    /*
-    if(!isset($visita->municipio) || !isset($visita->email)) {
+    
+    if(!isset($visita->municipio) || !isset($visita->email) || !isset($visita->nombre)) {
       http_response_code(400);
       exit(json_encode(["error" => "No se han enviado todos los parametros"]));
     }
 
-    */
-
+  
     if(!isset($visita->procedencia)) $visita->procedencia = null;
     if(!isset($visita->comentario)) $visita->comentario = null;
     if(!isset($visita->id_contacto)) $visita->id_contacto = null;
